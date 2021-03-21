@@ -8,7 +8,12 @@ Installation
 
     git clone https://github.com/starzel/flask.git
     cd flask
-    python -m venv .
+
+    # Create and enable virtualenv:
+    python3 -m venv .
+    ./bin/activate
+
+    # install
     pip install -r requirements
 
 

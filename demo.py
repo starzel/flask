@@ -7,6 +7,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def demo():
+    breakpoint()
     data = random_joke()
     return data['joke']
 
