@@ -11,7 +11,7 @@ Installation
 
     # Create and enable virtualenv:
     python3 -m venv .
-    ./bin/activate
+    source bin/activate
 
     # install
     pip install -r requirements
