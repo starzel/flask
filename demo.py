@@ -7,11 +7,11 @@ app = Flask(__name__)
 
 @app.route('/')
 def demo():
-    breakpoint()
     data = random_joke()
     return data['joke']
 
 
 def random_joke():
-    joke = requests.get('http://api.icndb.com/jokes/random?escape=javascript')
+    response = requests.get('http://api.icndb.com/jokes/random?escape=javascript')
+    response.raise_for_status()
     return json.loads(joke.text)['value']
