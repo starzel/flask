@@ -14,4 +14,4 @@ def demo():
 def random_joke():
     response = requests.get('http://api.icndb.com/jokes/random?escape=javascript')
     response.raise_for_status()
-    return json.loads(joke.text)['value']
+    return json.loads(response.text)['value']
